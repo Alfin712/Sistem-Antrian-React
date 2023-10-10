@@ -1,0 +1,21 @@
+.bgfoto {
+    background-image: url(../assets/bg.png);
+    background-size: cover;
+}
+
+.custom-width {
+    width: 500px; 
+  }
+
+.custom-width-2 {
+   width: 400px; 
+   margin-left: 35px;
+  }
+
+.custom-width-2 button {
+    width: 400px;
+   }
+
+.custom-height {
+    height: 400px; 
+  }

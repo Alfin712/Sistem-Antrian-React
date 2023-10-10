@@ -1,27 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import React, { Children } from 'react';
+import { BrowserRouter as Router, Outlet } from "react-router-dom";
 import Menu from './pages/Menu';
-import Login from './pages/Login';
-import Register from './pages/Register';  
-import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";  
+import "bootstrap/dist/css/bootstrap.min.css";  
+import "./css/style.css";
+import Header from './pages/Header';
 
 
-function App() {
+function App({Children}) {
   return (
-    <div className="h-100">
-      <Router>
+    <div className="bgfoto">
         <div className="d-flex">
-          <div className="w-100">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="Login" element={<Login />} />
-              <Route path="Register" element={<Register />} />
-            </Routes>
+          <div className="w-100 bg-dark opacity-75" >
+          <Header/>
+            {Children}
+            <Outlet  style={{ backgroundColor: 'blue' }}/>
           </div>
           <Menu/>
         </div>
-        </Router>
     </div>
   );
 }
