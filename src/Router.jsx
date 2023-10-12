@@ -3,9 +3,10 @@ import App from "./App"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
-import UserIndex from "./pages/content/userIndex"
-import Cs from "./pages/content/csIndex"
-import Teller from "./pages/content/tellerIndex"
+import Dashboard from "./pages/content/dashboard"
+import UserIndex from "./pages/content/UserIndex"
+import Cs from "./pages/content/CsIndex"
+import Teller from "./pages/content/TellerIndex"
 
 
 const router = createBrowserRouter([
@@ -27,8 +28,21 @@ const router = createBrowserRouter([
         element: <Register/>,   
     },
     {
-        path: 'userIndex',
-        element: <UserIndex/>,   
+        element: <Dashboard/>,
+        children: [
+            {
+                path: 'user',
+                element: <UserIndex/>,
+            },
+            {
+                path: 'teller',
+                element: <Teller/>,
+            },
+            {
+                path: 'cs',
+                element: <Cs/>,
+            },
+        ]   
     },
 ])
 

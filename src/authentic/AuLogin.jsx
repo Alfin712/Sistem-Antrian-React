@@ -16,7 +16,7 @@ function Login() {
       password: password,
     };
 
-    const loginUrl = "https://localhost/api/login";
+    const loginUrl = "https://localhost/api.php/login";
 
     // Menggunakan Axios untuk mengirim data ke backend
     axios.post(loginUrl, data)
