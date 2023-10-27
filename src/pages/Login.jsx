@@ -5,30 +5,31 @@ import Header from "./Header";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function Login () {
+function Login() {
   const marginatas = {
-    marginTop: '100px'
+    marginTop: '30px'
   };
 
   const tinggi = {
-    minHeight: "100vh",  
+    minHeight: "100vh",
   }
 
   const [isHovered, setIsHovered] = useState(false);
 
   const registerLinkStyle = {
-    color: "white",
+    color: "blue",
     marginRight: "3px",
     textDecoration: "none",
     transition: "text-decoration 0.3s",
   };
 
   const registerLinkHoverStyle = {
+    color: "white",
     textDecoration: "underline",
   };
-  
+
   return (
-    <div className="bg-primary" style={tinggi}>
+    <div style={tinggi}>
       <div>
         <Header />
       </div>
@@ -39,7 +40,7 @@ function Login () {
         <p style={{ color: "white", marginRight: "3px" }}>Don't have an account? try</p>
         <Link
           to="/Register"
-          className="text-white nav-link register-link"
+          className="nav-link register-link"
           style={{
             ...registerLinkStyle,
             ...(isHovered && registerLinkHoverStyle),
@@ -52,7 +53,7 @@ function Login () {
           }}
         >
           Register
-        </Link>  
+        </Link>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Header1(props) {
     const bgStyle = {
-        backgroundColor: "rgba(169, 169, 169, 0.7)",
+        backgroundColor: "#D9D9D9",
         minHeight: "210px"
     };
 
@@ -13,7 +13,7 @@ function Header1(props) {
         color: "black",
         fontSize: "42px",
         fontFamily: "Bahnschrift SemiBold",
-        marginLeft: "50px",
+        marginLeft: "100px",
         marginTop: "10px" 
     };
 

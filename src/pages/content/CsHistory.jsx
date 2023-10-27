@@ -3,7 +3,7 @@ import Header from "./Header1";
 import { Link } from "react-router-dom";
 import { Modal } from 'react-bootstrap';
 
-function TellerIndex() {
+function CsHistory() {
 
     const [showModal, setShowModal] = useState(false);
     const [selectedPerson, setSelectedPerson] = useState(null);
@@ -22,9 +22,9 @@ function TellerIndex() {
     const peopleData = [
         {
             id: 1,
-            status : "Process",
+            status: "Process",
             name: "Ahmad Nur Bintang",
-            number: "A 104",
+            number: "B 104",
             admin: "Agus Sehat",
             time: "10:02:31",
             date: "14-05-2023",
@@ -33,9 +33,9 @@ function TellerIndex() {
         },
         {
             id: 2,
-            status : "Waiting",
+            status: "Waiting",
             name: "Supriyanti Asmara",
-            number: "A 105",
+            number: "B 105",
             admin: "Hermansyah",
             time: "11:22:52",
             date: "14-05-2023",
@@ -44,44 +44,11 @@ function TellerIndex() {
         },
         {
             id: 3,
-            status : "Waiting",
+            status: "Waiting",
             name: "Yusuf Mahmud",
-            number: "A 106",
+            number: "B 106",
             admin: "Agus Sehat",
             time: "12:10:12",
-            date: "14-05-2023",
-            phone: "08351334551",
-            // Tambahkan informasi lain yang diperlukan
-        },
-        {
-            id: 4,
-            status : "Waiting",
-            name: "Rehan Genteng",
-            number: "A 107",
-            admin: "Agus Sehat",
-            time: "15:02:11",
-            date: "14-05-2023",
-            phone: "08351334551",
-            // Tambahkan informasi lain yang diperlukan
-        },
-        {
-            id: 5,
-            status : "Waiting",
-            name: "Ady R",
-            number: "A 108",
-            admin: "Agus Sehat",
-            time: "16:02:33",
-            date: "14-05-2023",
-            phone: "08351334551",
-            // Tambahkan informasi lain yang diperlukan
-        },
-        {
-            id: 6,
-            status : "Waiting",
-            name: "Farhan Kebab",
-            number: "A 109",
-            admin: "Agus Sehat",
-            time: "17:52:20",
             date: "14-05-2023",
             phone: "08351334551",
             // Tambahkan informasi lain yang diperlukan
@@ -91,7 +58,7 @@ function TellerIndex() {
 
     return (
         <>
-            <Header title={"Teller Ticket Information"} />
+            <Header title={"Customer Services Ticket History"} />
             <div className="text-white m-4 rounded bg-primary" style={{ height: "65vh" }}>
                 <div style={{ height: "55vh", overflowY: "auto" }}>
                     <ul className="d-flex justify-content-center" style={{ listStyle: "none", paddingTop: "20px", paddingBottom: "20px", borderBottom: "1px solid white", display: "flex", justifyContent: "center" }}>
@@ -118,9 +85,21 @@ function TellerIndex() {
                     ))}
                 </div>
                 <div style={{ display: "flex", justifyContent: "flex-end", marginRight: "50px", marginTop: "20px" }}>
-                    <Link to="/dashboard/history-teller" className="btn btn-primary" style={{ width: "150px", background: "white", color: "blue" }} >
-                        History
-                    </Link>
+                    <div>
+                        <a
+                            href="#"  // Ganti dengan path gambar yang ingin Anda unduh
+                            download="#" // Ganti dengan nama gambar yang sesuai
+                            className="btn btn-primary" 
+                            style={{ width: "150px", background: "white", color: "blue", marginRight: "20px" }}
+                            variant="light" type="submit">
+                            Download
+                        </a>
+                    </div>
+                    <div>
+                        <Link to="/dashboard/admin-cs" className="btn btn-primary" style={{ width: "150px", background: "white", color: "blue" }} >
+                            Back
+                        </Link>
+                    </div>
                 </div>
             </div>
 
@@ -142,4 +121,4 @@ function TellerIndex() {
     );
 }
 
-export default TellerIndex;
+export default CsHistory;

@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function Register () {
   const marginatas = {
-    marginTop: '100px'
+    marginTop: '30px'
   };
 
   const tinggi = {
@@ -17,28 +17,30 @@ function Register () {
   const [isHovered, setIsHovered] = useState(false);
 
   const backLinkStyle = {
-    color: "white",
+    color: "blue",
     marginRight: "3px",
     textDecoration: "none", 
     transition: "text-decoration 0.3s", 
   };
 
   const backLinkHoverStyle = {
+    color: "white",
     textDecoration: "underline", 
   };
 
   return (
-    <div className="bg-primary" style={tinggi}>
+    <div style={tinggi}>
       <div>
         <Header />
       </div>
       <div>
         <AuRegister />
       </div>
-      <div className="text-center text-blue" style={marginatas}>
+      <div className="text-center text-blue d-flex justify-content-center" style={marginatas}>
+        <p style={{ color: "white", marginRight: "3px" }}>Already have an account? try</p>
         <Link
-          to="/Login"
-          className="text-white nav-link"
+          to="/"
+          className="nav-link"
           style={{
             ...backLinkStyle,
             ...(isHovered && backLinkHoverStyle),
@@ -50,7 +52,7 @@ function Register () {
             setIsHovered(false);
           }}
         >
-          Back
+          Login
         </Link>  
       </div>
     </div>
