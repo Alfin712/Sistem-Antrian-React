@@ -28,11 +28,11 @@ const router = createBrowserRouter([
                 path: 'register',
                 element: <Register/>,   
             },
+            {
+                path: '/AuRegister',
+                element: <Register/>,
+            },
         ]
-    },
-    {
-        path: 'register',
-        element: <Register/>,   
     },
     {
         path: 'dashboard',

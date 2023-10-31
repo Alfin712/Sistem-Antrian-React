@@ -20,9 +20,7 @@ function Header1(props) {
     return (
         <div>
             <div style={bgStyle}>
-                <Link to="/" className="text-decoration-none">
-                    <img src={gambar} style={{ height: "110px", width: "150px", marginLeft: "50px", marginTop: "10px" }}/>
-                </Link>
+                <img src={gambar} style={{ height: "110px", width: "150px", marginLeft: "50px", marginTop: "10px" }}/>
                 <h1 style={headerTextStyle}>{props.title}</h1>
             </div>
         </div>
