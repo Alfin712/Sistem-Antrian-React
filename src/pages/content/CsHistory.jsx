@@ -96,7 +96,7 @@ function CsHistory() {
                         </a>
                     </div>
                     <div>
-                        <Link to="/dashboard/admin-cs" className="btn btn-primary" style={{ width: "150px", background: "white", color: "blue" }} >
+                        <Link to="/dashboard/cs" className="btn btn-primary" style={{ width: "150px", background: "white", color: "blue" }} >
                             Back
                         </Link>
                     </div>

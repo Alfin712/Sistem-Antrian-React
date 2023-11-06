@@ -1,21 +1,79 @@
 .bgfoto {
-    background-image: url(../assets/bg.png);
-    background-size: cover;
+  background-image: url(../assets/bg.png);
+  background-size: cover;
 }
 
 .custom-width {
-    width: 500px; 
-  }
+  width: 500px;
+}
 
 .custom-width-2 {
-   width: 400px; 
-   margin-left: 35px;
-  }
+  width: 400px;
+  margin-left: 35px;
+}
 
 .custom-width-2 button {
-    width: 400px;
-   }
+  width: 400px;
+}
 
 .custom-height {
-    height: 400px; 
+  height: 400px;
+}
+
+/* Tampilan awal menu ul li */
+.li-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+}
+
+/* Gaya tombol burger menu */
+.burger-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+}
+
+/* Gaya menu ul li saat layar kecil */
+@media (max-width: 768px) {
+  .li-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .li-nav.active {
+    display: flex;
+  }
+
+  .burger-menu-button.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .burger-menu-button.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu-button.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}

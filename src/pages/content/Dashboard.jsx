@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <div>
         <div className="d-flex">
-            <div className="w-100" >   
+            <div className="w-100">   
                 <Outlet />
             </div>
             <Menu/>
